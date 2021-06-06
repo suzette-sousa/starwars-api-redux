@@ -15,7 +15,6 @@ const Results = (props) => {
             <Link to={(queryData.name).replace(/ /g, "")}>{queryData.name}</Link>
             <Route path="/:id" render={() => <Details detail={queryData} />} />
           </Router>
-          <p>{queryData.name}</p>
         </div>
       )}
     </>
