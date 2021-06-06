@@ -1,6 +1,9 @@
-function App() {
+import Search from "./components/Search";
+
+const App = () => {
   return (
     <div className="App">
+      <Search />
     </div>
   );
 }
