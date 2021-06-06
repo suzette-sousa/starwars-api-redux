@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { connect, useDispatch } from 'react-redux';
 import { getQueryData } from '../store/actions/queryAction';
+import Results from './Results'
 
 const Search = (props) => {
   const [searchValue, setSearchValue] = useState('');
@@ -13,7 +14,9 @@ const Search = (props) => {
   }, [dispatch, chooseSearch, searchValue])
   
   const {queryData} = props.queryData;
+  const {loading} = props.queryData;
   console.log('queries', queryData); // TODO : TO DELETE
+  console.log(loading)
 
   const handleInputChange = (e) => {
     setSearchValue(e.target.value);
@@ -53,9 +56,11 @@ const Search = (props) => {
             autoComplete="off"
             onChange={handleInputChange}
           />
-          <button type="submit">Rechercher</button>
         </form>
       </section>
+
+      <Results {...props} />
+
     </>
   );
 };
