@@ -12,7 +12,11 @@ const Search = (props) => {
   }, [dispatch, chooseSearch, searchValue])
   
   const {queryData} = props.queryData;
-  console.log('queries', queryData);
+  console.log('queries', queryData); // TODO : TO DELETE
+
+  const handleInputChange = (e) => {
+    setSearchValue(e.target.value);
+  };
 
   return (
     <>
@@ -34,8 +38,9 @@ const Search = (props) => {
           <input
             type="search"
             name="searchValue"
-            value=""
+            value={searchValue}
             autoComplete="off"
+            onChange={handleInputChange}
           />
           <button type="submit">Rechercher</button>
         </form>
