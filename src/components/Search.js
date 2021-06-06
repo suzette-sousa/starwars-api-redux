@@ -3,8 +3,9 @@ import { connect, useDispatch } from 'react-redux';
 import { getQueryData } from '../store/actions/queryAction';
 
 const Search = (props) => {
-  const [searchValue, setSearchValue] = useState('aa');
+  const [searchValue, setSearchValue] = useState('');
   const [chooseSearch, setChooseSearch] = useState('planets');
+  const [isChecked, setIsChecked] = useState(true);
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -18,6 +19,13 @@ const Search = (props) => {
     setSearchValue(e.target.value);
   };
 
+  const chooseSearchChange = (e) => {  // TODO : TO IMPROVE
+    if(e.target.id === "chooseSearch-planets") setChooseSearch("planets");
+    if(e.target.id === "chooseSearch-people") setChooseSearch("people");
+    setIsChecked(!isChecked);
+    if(e.target.checked) e.target.checked = isChecked;
+  };
+
   return (
     <>
       <section>
@@ -27,12 +35,15 @@ const Search = (props) => {
             id="chooseSearch-planets"
             type="radio"
             name="chooseSearch"
+            checked={isChecked}
+            onChange={chooseSearchChange}
           />
           <label htmlFor="chooseSearch-planets">Planète</label>
           <input
             id="chooseSearch-people"
             type="radio"
             name="chooseSearch"
+            onChange={chooseSearchChange}
           />
           <label htmlFor="chooseSearch-people">Personnage</label>
           <input
