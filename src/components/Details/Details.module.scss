@@ -1,0 +1,32 @@
+.ctr {
+  position: fixed;
+  background-color: rgba(0,0,0,0.8);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.content {
+  position: relative;
+  width: 100%;
+  max-width: 20rem;
+  padding: 2rem;
+  background-color: #fff;
+  text-align: left;
+  color: #000;
+}
+.info + .title {
+  margin-top: 1rem;
+}
+.close {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 300;
+}

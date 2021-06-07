@@ -11,12 +11,41 @@ const Details = (props) => {
 
   return (
     <>
-      {props.climate && <p>Climat : {props.climate}</p>}
-      {props.diameter && <p>Diamètre : {props.diameter}</p>}
-      {props.population && <p>Population : {props.population}</p>}
-      {props.gender && <p>Genre : {props.gender}</p>}
-      {props.hair_color && <p>Couleur de cheveux : {props.hair_color}</p>}
-      <button type="button" onClick={handleClick}>x Fermer</button>
+      <div className={Styles.ctr} onClick={handleClick}>
+        <span className={Styles.close}>X<span hidden>Close</span></span>
+        <div className={Styles.content}>
+          {props.climate && 
+            <>
+              <h3 className={Styles.title}>Climat :</h3>
+              <p className={Styles.info}>{props.climate}</p>
+            </>
+          }
+          {props.diameter && 
+            <>
+              <h3 className={Styles.title}>Diamètre :</h3>
+              <p className={Styles.info}>{props.diameter}</p>
+            </>
+          }
+          {props.population && 
+            <>
+              <h3 className={Styles.title}>Population : </h3>
+              <p className={Styles.info}>{props.population}</p>
+            </>
+          }
+          {props.gender && 
+            <>
+              <h3 className={Styles.title}>Genre :</h3>
+              <p className={Styles.info}>{props.gender}</p>
+            </>
+          }
+          {props.hair_color && 
+            <>
+              <h3 className={Styles.title}>Couleur de cheveux :</h3>
+              <p className={Styles.info}>{props.hair_color}</p>
+            </>
+          }
+        </div>
+      </div>
     </>
   );
 
