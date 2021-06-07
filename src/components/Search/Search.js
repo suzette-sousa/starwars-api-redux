@@ -11,6 +11,7 @@ const Search = (props) => {
   const [isChecked, setIsChecked] = useState(true);
   const [whichPage, setWhichPage] = useState(1);
   const [newData, setNewData] = useState([]);
+  const [hidden, setHidden] = useState(true);
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -25,6 +26,7 @@ const Search = (props) => {
 
   const handleInputChange = (e) => {
     setSearchValue(e.target.value);
+    setHidden(false);
   };
 
   const chooseSearchChange = (e) => {  // TODO : TO IMPROVE
@@ -78,6 +80,8 @@ const Search = (props) => {
         </form>
       </section>
       
+      {!hidden && queryData.length + (queryData.length <= 1 ? ' résultat' : ' résultats')}
+
       <Results {...props} />
 
       <button onClick={getNextPage}>Page suivante</button>
