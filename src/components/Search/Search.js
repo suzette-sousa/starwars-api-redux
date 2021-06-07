@@ -33,6 +33,7 @@ const Search = (props) => {
   console.log(loading)
 
   const handleInputChange = (e) => {
+    if(e.target.value.trim !== "") setWhichPage(1);
     setSearchValue(e.target.value);
     setHidden(false);
   };
