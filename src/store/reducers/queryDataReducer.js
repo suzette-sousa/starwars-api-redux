@@ -1,7 +1,6 @@
 import { GET_QUERYDATA } from '../actions/actionTypes';
 
 const initialState = {
-  queryData: [],
   loading: true
 }
 

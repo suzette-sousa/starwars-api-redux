@@ -7,7 +7,10 @@ export const getQueryData = (typeSearch, wordSearch, whichPage) => async dispatc
   .then(response => {
     dispatch({
       type: GET_QUERYDATA,
-      payload: response.data.results
+      payload: {
+        results: response.data.results,
+        count: response.data.count
+      }
     })
   })
   .catch(error => {

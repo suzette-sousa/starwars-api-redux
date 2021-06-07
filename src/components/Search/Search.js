@@ -20,8 +20,11 @@ const Search = (props) => {
   
   const {queryData} = props.queryData;
   const {loading} = props.queryData;
+  const results = {...queryData}.results;
+  const count = {...queryData}.count;
   
-  console.log('queries', queryData); // TODO : TO DELETE
+  console.log('queries', results); // TODO : TO DELETE
+  console.log('count', count);
   console.log(loading)
 
   const handleInputChange = (e) => {
@@ -95,7 +98,7 @@ const Search = (props) => {
         </form>
       </section>
       
-      {!hidden && queryData.length + (queryData.length <= 1 ? ' résultat' : ' résultats')}
+      {!hidden && count + (count <= 1 ? ' résultat' : ' résultats')}
 
       <Results {...props} />
 
