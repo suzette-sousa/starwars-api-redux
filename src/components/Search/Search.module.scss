@@ -75,3 +75,13 @@
     outline: 2px solid var(--sw-color-princ);
   }
 }
+.inputPrevNext {
+  display: flex;
+  justify-content: space-between;
+}
+.inputPrev {
+  margin-right: auto;
+}
+.inputNext {
+  margin-left: auto;
+}

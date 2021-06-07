@@ -22,9 +22,14 @@ const Search = (props) => {
   const {loading} = props.queryData;
   const results = {...queryData}.results;
   const count = {...queryData}.count;
+  const next = {...queryData}.next;
+  const previous = {...queryData}.previous;
   
+  console.log('queryData', queryData);
   console.log('queries', results); // TODO : TO DELETE
   console.log('count', count);
+  console.log('next', next);
+  console.log('previous', previous);
   console.log(loading)
 
   const handleInputChange = (e) => {
@@ -39,19 +44,23 @@ const Search = (props) => {
     if(e.target.checked) e.target.checked = isChecked;
   };
 
+  const getPrevPage = () => {
+    setWhichPage(whichPage - 1);
+  }
+
   const getNextPage = () => {
-    setWhichPage(whichPage + 1)
+    setWhichPage(whichPage + 1);
     const datasSet = new Set([
       ...newData,
-      ...queryData
+      ...results
     ]);
     const datasSetArr = [...datasSet];
     console.log("set", datasSetArr)
     setNewData(datasSetArr)
   }
   useEffect(() => {
-    console.log("testdatas", {newData, queryData});
-  }, [newData, queryData]);
+    console.log("testdatas", {newData, results});
+  }, [newData, results]);
 
   return (
     <>
@@ -102,7 +111,10 @@ const Search = (props) => {
 
       <Results {...props} />
 
-      <button onClick={getNextPage}>Page suivante</button>
+      <div className={Styles.inputPrevNext}>
+        {previous && <button onClick={getPrevPage} className={Styles.inputPrev}>Page précédente</button>}
+        {next && <button onClick={getNextPage} className={Styles.inputNext}>Page suivante</button>}
+      </div>
     </>
   );
 };

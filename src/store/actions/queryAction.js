@@ -9,7 +9,9 @@ export const getQueryData = (typeSearch, wordSearch, whichPage) => async dispatc
       type: GET_QUERYDATA,
       payload: {
         results: response.data.results,
-        count: response.data.count
+        count: response.data.count,
+        next: response.data.next,
+        previous: response.data.previous
       }
     })
   })
