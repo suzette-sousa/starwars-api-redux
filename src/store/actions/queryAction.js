@@ -8,7 +8,7 @@ export const getQueryData = (typeSearch, wordSearch, whichPage) => async dispatc
     dispatch({
       type: GET_QUERYDATA,
       payload: {
-        results: response.data.results,
+        results: response.data.results.sort((a, b) => a.name > b.name ? 1:-1),
         count: response.data.count,
         next: response.data.next,
         previous: response.data.previous

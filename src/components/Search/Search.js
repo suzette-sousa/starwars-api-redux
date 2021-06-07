@@ -4,13 +4,11 @@ import { getQueryData } from '../../store/actions/queryAction';
 import Results from '../Results/Results';
 import Styles from "./Search.module.scss";
 
-
 const Search = (props) => {
   const [searchValue, setSearchValue] = useState('');
   const [chooseSearch, setChooseSearch] = useState('planets');
   const [isChecked, setIsChecked] = useState(true);
   const [whichPage, setWhichPage] = useState(1);
-  const [newData, setNewData] = useState([]);
   const [hidden, setHidden] = useState(true);
 
   const dispatch = useDispatch();
@@ -20,10 +18,12 @@ const Search = (props) => {
   
   const {queryData} = props.queryData;
   const {loading} = props.queryData;
-  const results = {...queryData}.results;
+  let results = {...queryData}.results;
   const count = {...queryData}.count;
   const next = {...queryData}.next;
   const previous = {...queryData}.previous;
+
+  const [newData, setNewData] = useState([]);
   
   console.log('queryData', queryData);
   console.log('queries', results); // TODO : TO DELETE
@@ -49,6 +49,10 @@ const Search = (props) => {
     setWhichPage(whichPage - 1);
   }
 
+  useEffect(() => {
+    console.log("testdatas", {newData, results});
+  }, [newData, results, whichPage]);
+
   const getNextPage = () => {
     setWhichPage(whichPage + 1);
     const datasSet = new Set([
@@ -56,12 +60,8 @@ const Search = (props) => {
       ...results
     ]);
     const datasSetArr = [...datasSet];
-    console.log("set", datasSetArr)
     setNewData(datasSetArr)
   }
-  useEffect(() => {
-    console.log("testdatas", {newData, results});
-  }, [newData, results]);
 
   return (
     <>
@@ -110,7 +110,7 @@ const Search = (props) => {
       
       {!hidden && count + (count <= 1 ? ' résultat' : ' résultats')}
 
-      <Results {...props} />
+      <Results {...props} newData={newData} />
 
       <div className={Styles.inputPrevNext}>
         {previous && <button onClick={getPrevPage} className={Styles.inputPrev}>Page précédente</button>}
@@ -120,6 +120,6 @@ const Search = (props) => {
   );
 };
 
-const mapStateToProps = (state) => ({queryData: state.queryData});
+const mapStateToProps = (state) => ({queryData: state.queryData, newData: state.newData});
 
 export default connect(mapStateToProps)(Search);

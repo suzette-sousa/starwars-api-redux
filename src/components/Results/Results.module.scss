@@ -9,9 +9,13 @@
 }
 .listLink {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
   padding: 1rem;
   background-color: #272b30;
   box-shadow: 0 0 1px #ccc;
+  font-size: 2rem;
   color: #fff;
   &:hover {
     background-color: #32383e;
