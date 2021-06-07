@@ -53,7 +53,8 @@ const Search = (props) => {
   return (
     <>
       <section>
-        <h2 className={Styles.title}>Rechercher</h2>
+        <h1 className={Styles.titleh1}>Starwars</h1>
+        <h2 className={Styles.titleh2}>Rechercher dans la base</h2>
         <form id="searchForm" className={Styles.form}>
           <div className={Styles.radioCtr}>
             <input
