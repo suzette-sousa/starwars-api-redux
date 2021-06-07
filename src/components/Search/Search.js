@@ -53,28 +53,42 @@ const Search = (props) => {
   return (
     <>
       <section>
-        <h2>Rechercher</h2>
-        <form id="searchForm">
-          <input
-            id="chooseSearch-planets"
-            type="radio"
-            name="chooseSearch"
-            checked={isChecked}
-            onChange={chooseSearchChange}
-          />
-          <label htmlFor="chooseSearch-planets">Planète</label>
-          <input
-            id="chooseSearch-people"
-            type="radio"
-            name="chooseSearch"
-            onChange={chooseSearchChange}
-          />
-          <label htmlFor="chooseSearch-people">Personnage</label>
+        <h2 className={Styles.title}>Rechercher</h2>
+        <form id="searchForm" className={Styles.form}>
+          <div className={Styles.radioCtr}>
+            <input
+              id="chooseSearch-planets"
+              type="radio"
+              name="chooseSearch"
+              checked={isChecked}
+              className={Styles.radioInput}
+              onChange={chooseSearchChange}
+            />
+            <label 
+              htmlFor="chooseSearch-planets" 
+              className={Styles.radioLabel}>
+                Planète
+            </label>
+            <input
+              id="chooseSearch-people"
+              type="radio"
+              name="chooseSearch"
+              className={Styles.radioInput}
+              onChange={chooseSearchChange}
+            />
+            <label
+              htmlFor="chooseSearch-people"
+              className={Styles.radioLabel}>
+              Personnage
+            </label>
+          </div>
           <input
             type="search"
             name="searchValue"
             value={searchValue}
+            placeholder={`Saisir le nom ${chooseSearch === "planets" ? "d'une planète" : "d'un personnage"}`}
             autoComplete="off"
+            className={Styles.inputSearch}
             onChange={handleInputChange}
           />
         </form>
