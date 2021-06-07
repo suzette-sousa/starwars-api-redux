@@ -5,11 +5,19 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #1c1e22;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #fff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1, h2 {
+  font-size: 1.8rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .App {

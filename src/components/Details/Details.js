@@ -1,4 +1,5 @@
 import { useHistory } from 'react-router-dom';
+import Styles from './Details.module.scss';
 
 const Details = (props) => {
 

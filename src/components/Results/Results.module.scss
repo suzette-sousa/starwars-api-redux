@@ -1,0 +1,19 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  &>div {
+    flex: 0 0 calc(50% - 2rem);
+    padding: 1rem;
+  }
+}
+.listLink {
+  display: flex;
+  padding: 1rem;
+  background-color: #272b30;
+  box-shadow: 0 0 1px #ccc;
+  color: #fff;
+  &:hover {
+    background-color: #32383e;
+  }
+}

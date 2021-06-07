@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { connect, useDispatch } from 'react-redux';
-import { getQueryData } from '../store/actions/queryAction';
-import Results from './Results'
+import { getQueryData } from '../../store/actions/queryAction';
+import Results from '../Results/Results';
+import Styles from "./Search.module.scss";
 
 
 const Search = (props) => {
@@ -76,7 +77,7 @@ const Search = (props) => {
           />
         </form>
       </section>
-
+      
       <Results {...props} />
 
       <button onClick={getNextPage}>Page suivante</button>
