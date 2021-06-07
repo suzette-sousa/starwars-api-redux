@@ -4,7 +4,6 @@ import Styles from './Details.module.scss';
 const Details = (props) => {
 
   props = props.detail;
-  console.log("propsdetails", props) //TODO : TO DELETE
 
   const history = useHistory();
   const handleClick = () => history.push("/");

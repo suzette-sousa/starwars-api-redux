@@ -24,13 +24,6 @@ const Search = (props) => {
   const previous = {...queryData}.previous;
 
   const [newData, setNewData] = useState([]);
-  
-  console.log('queryData', queryData);
-  console.log('queries', results); // TODO : TO DELETE
-  console.log('count', count);
-  console.log('next', next);
-  console.log('previous', previous);
-  console.log(loading)
 
   const handleInputChange = (e) => {
     if(e.target.value.trim !== "") setWhichPage(1);
@@ -44,11 +37,7 @@ const Search = (props) => {
     setIsChecked(!isChecked);
     if(e.target.checked) e.target.checked = isChecked;
   };
-
-  const getPrevPage = () => {
-    setWhichPage(whichPage - 1);
-  }
-
+  
   useEffect(() => {
     console.log("testdatas", {newData, results});
   }, [newData, results, whichPage]);

@@ -8,10 +8,6 @@ const Results = (props) => {
   const {loading} = props.queryData;
   const results = {...queryData}.results;
   const newData = props.newData;
-
-  console.log("results props", props)
-  console.log("results results", results)
-  console.log("results newdata", newData)
   
   return (
     <>
