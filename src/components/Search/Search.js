@@ -113,8 +113,7 @@ const Search = (props) => {
       <Results {...props} newData={newData} />
 
       <div className={Styles.inputPrevNext}>
-        {previous && <button onClick={getPrevPage} className={Styles.inputPrev}>Page précédente</button>}
-        {next && <button onClick={getNextPage} className={Styles.inputNext}>Page suivante</button>}
+        {next && <button onClick={getNextPage} className={Styles.inputNext}>Charger + de résultats</button>}
       </div>
     </>
   );
