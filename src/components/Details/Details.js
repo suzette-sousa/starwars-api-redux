@@ -3,7 +3,7 @@ import Styles from './Details.module.scss';
 
 const Details = (props) => {
 
-  props = props.detail;
+  const results = props.location.state.results;
 
   const history = useHistory();
   const handleClick = () => history.push("/");
@@ -13,34 +13,34 @@ const Details = (props) => {
       <div className={Styles.ctr} onClick={handleClick}>
         <span className={Styles.close}>X<span hidden>Close</span></span>
         <div className={Styles.content}>
-          {props.climate && 
+          {results.climate && 
             <>
               <h3 className={Styles.title}>Climat :</h3>
-              <p className={Styles.info}>{props.climate}</p>
+              <p className={Styles.info}>{results.climate}</p>
             </>
           }
-          {props.diameter && 
+          {results.diameter && 
             <>
               <h3 className={Styles.title}>Diamètre :</h3>
-              <p className={Styles.info}>{props.diameter}</p>
+              <p className={Styles.info}>{results.diameter}</p>
             </>
           }
-          {props.population && 
+          {results.population && 
             <>
               <h3 className={Styles.title}>Population : </h3>
-              <p className={Styles.info}>{props.population}</p>
+              <p className={Styles.info}>{results.population}</p>
             </>
           }
-          {props.gender && 
+          {results.gender && 
             <>
               <h3 className={Styles.title}>Genre :</h3>
-              <p className={Styles.info}>{props.gender}</p>
+              <p className={Styles.info}>{results.gender}</p>
             </>
           }
-          {props.hair_color && 
+          {results.hair_color && 
             <>
               <h3 className={Styles.title}>Couleur de cheveux :</h3>
-              <p className={Styles.info}>{props.hair_color}</p>
+              <p className={Styles.info}>{results.hair_color}</p>
             </>
           }
         </div>

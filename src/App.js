@@ -1,9 +1,20 @@
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Search from "./components/Search/Search";
+import Results from "./components/Results/Results";
+import Details from "./components/Details/Details";
 
 const App = () => {
   return (
     <div className="App">
-      <Search />
+      <Router>
+        <main className="ctn">
+          <Switch>
+            <Route exact path={"/"} component={Search} />
+            <Route path={"/search"} component={Search} />
+            <Route path={"/test/:name"} component={Details} />
+          </Switch>
+        </main>
+      </Router>
     </div>
   );
 }

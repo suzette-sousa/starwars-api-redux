@@ -42,10 +42,6 @@ const Search = (props) => {
     setWhichPage(whichPage - 1);
   }
 
-  useEffect(() => {
-    console.log("testdatas", {newData, results});
-  }, [newData, results, whichPage]);
-
   const getNextPage = () => {
     setWhichPage(whichPage + 1);
     const datasSet = new Set([
