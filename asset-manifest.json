@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/starwars-api-redux/static/css/main.8b307186.chunk.css",
-    "main.js": "/starwars-api-redux/static/js/main.ca0f7d6c.chunk.js",
-    "main.js.map": "/starwars-api-redux/static/js/main.ca0f7d6c.chunk.js.map",
+    "main.js": "/starwars-api-redux/static/js/main.2a2c4945.chunk.js",
+    "main.js.map": "/starwars-api-redux/static/js/main.2a2c4945.chunk.js.map",
     "runtime-main.js": "/starwars-api-redux/static/js/runtime-main.43ba995b.js",
     "runtime-main.js.map": "/starwars-api-redux/static/js/runtime-main.43ba995b.js.map",
-    "static/js/2.ed4c10aa.chunk.js": "/starwars-api-redux/static/js/2.ed4c10aa.chunk.js",
-    "static/js/2.ed4c10aa.chunk.js.map": "/starwars-api-redux/static/js/2.ed4c10aa.chunk.js.map",
+    "static/js/2.de81ca3e.chunk.js": "/starwars-api-redux/static/js/2.de81ca3e.chunk.js",
+    "static/js/2.de81ca3e.chunk.js.map": "/starwars-api-redux/static/js/2.de81ca3e.chunk.js.map",
     "static/js/3.07c66009.chunk.js": "/starwars-api-redux/static/js/3.07c66009.chunk.js",
     "static/js/3.07c66009.chunk.js.map": "/starwars-api-redux/static/js/3.07c66009.chunk.js.map",
     "index.html": "/starwars-api-redux/index.html",
     "static/css/main.8b307186.chunk.css.map": "/starwars-api-redux/static/css/main.8b307186.chunk.css.map",
-    "static/js/2.ed4c10aa.chunk.js.LICENSE.txt": "/starwars-api-redux/static/js/2.ed4c10aa.chunk.js.LICENSE.txt"
+    "static/js/2.de81ca3e.chunk.js.LICENSE.txt": "/starwars-api-redux/static/js/2.de81ca3e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.43ba995b.js",
-    "static/js/2.ed4c10aa.chunk.js",
+    "static/js/2.de81ca3e.chunk.js",
     "static/css/main.8b307186.chunk.css",
-    "static/js/main.ca0f7d6c.chunk.js"
+    "static/js/main.2a2c4945.chunk.js"
   ]
 }
