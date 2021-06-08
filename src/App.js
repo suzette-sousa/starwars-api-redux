@@ -6,12 +6,12 @@ import Details from "./components/Details/Details";
 const App = () => {
   return (
     <div className="App">
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <main className="ctn">
           <Switch>
             <Route exact path={"/"} component={Search} />
             <Route path={"/search"} component={Search} />
-            <Route path={"/test/:name"} component={Details} />
+            <Route path={"/results/:name"} component={Details} />
           </Switch>
         </main>
       </Router>

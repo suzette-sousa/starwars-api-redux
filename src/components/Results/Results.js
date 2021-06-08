@@ -14,7 +14,7 @@ const Results = (props) => {
       <section className={Styles.list}>
         {!loading && results.map((results, i) =>
           <div key={i}>
-              <Link to={{pathname: `/test/${results.name}`, state: {results}}} key={results.id} className={Styles.listLink}>
+              <Link to={{pathname: `/results/${results.name}`, state: {results}}} key={results.id} className={Styles.listLink}>
               {results.name}
               </Link>
           </div>
