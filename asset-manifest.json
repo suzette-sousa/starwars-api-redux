@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/starwars-api-redux/search/static/css/main.8b307186.chunk.css",
-    "main.js": "/starwars-api-redux/search/static/js/main.18b03896.chunk.js",
-    "main.js.map": "/starwars-api-redux/search/static/js/main.18b03896.chunk.js.map",
+    "main.js": "/starwars-api-redux/search/static/js/main.c78fc857.chunk.js",
+    "main.js.map": "/starwars-api-redux/search/static/js/main.c78fc857.chunk.js.map",
     "runtime-main.js": "/starwars-api-redux/search/static/js/runtime-main.bc640fbc.js",
     "runtime-main.js.map": "/starwars-api-redux/search/static/js/runtime-main.bc640fbc.js.map",
     "static/js/2.ad391e88.chunk.js": "/starwars-api-redux/search/static/js/2.ad391e88.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.bc640fbc.js",
     "static/js/2.ad391e88.chunk.js",
     "static/css/main.8b307186.chunk.css",
-    "static/js/main.18b03896.chunk.js"
+    "static/js/main.c78fc857.chunk.js"
   ]
 }
