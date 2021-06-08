@@ -21,14 +21,6 @@ const Results = (props) => {
             </Router>
           </div>
         )}
-        {newData && newData.map((newData, i) =>
-          <div key={i}>
-            <Router>
-              <Link to={(newData.name).replace(/ /g, "")} className={Styles.listLink}>{newData.name}</Link>
-              <Route path="/:id" render={() => <Details detail={newData} />} />
-            </Router>
-          </div>
-        )}
       </section>
     </>
   );

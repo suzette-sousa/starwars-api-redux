@@ -79,10 +79,16 @@
   position: sticky;
   bottom: 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
-.inputNext {
+.inputNext, .inputPrev {
   background-color: var(--sw-color-princ);
   padding: 1rem;
   color: #000;
+}
+.inputNext {
+  margin-left: auto;
+}
+.inputPrev {
+  margin-right: auto;
 }

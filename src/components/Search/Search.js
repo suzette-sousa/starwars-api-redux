@@ -24,7 +24,7 @@ const Search = (props) => {
   const previous = {...queryData}.previous;
 
   const [newData, setNewData] = useState([]);
-
+  
   const handleInputChange = (e) => {
     if(e.target.value.trim !== "") setWhichPage(1);
     setSearchValue(e.target.value);
@@ -37,7 +37,11 @@ const Search = (props) => {
     setIsChecked(!isChecked);
     if(e.target.checked) e.target.checked = isChecked;
   };
-  
+
+  const getPrevPage = () => {
+    setWhichPage(whichPage - 1);
+  }
+
   useEffect(() => {
     console.log("testdatas", {newData, results});
   }, [newData, results, whichPage]);
@@ -102,7 +106,8 @@ const Search = (props) => {
       <Results {...props} newData={newData} />
 
       <div className={Styles.inputPrevNext}>
-        {next && <button onClick={getNextPage} className={Styles.inputNext}>Charger + de résultats</button>}
+        {previous && <button onClick={getPrevPage} className={Styles.inputPrev}>Page précédente</button>}
+        {next && <button onClick={getNextPage} className={Styles.inputNext}>Page suivante</button>}
       </div>
     </>
   );
